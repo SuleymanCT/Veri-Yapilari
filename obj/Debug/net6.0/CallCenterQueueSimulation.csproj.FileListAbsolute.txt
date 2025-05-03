@@ -1,0 +1,15 @@
+C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\CallCenterQueueSimulation.csproj.AssemblyReference.cache
+C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\CallCenterQueueSimulation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\CallCenterQueueSimulation.AssemblyInfoInputs.cache
+C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\CallCenterQueueSimulation.AssemblyInfo.cs
+C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\CallCenterQueueSimulation.csproj.CoreCompileInputs.cache
+C:\Users\sleym\CallCenterQueueSimulation\bin\Debug\net6.0\CallCenterQueueSimulation.exe
+C:\Users\sleym\CallCenterQueueSimulation\bin\Debug\net6.0\CallCenterQueueSimulation.deps.json
+C:\Users\sleym\CallCenterQueueSimulation\bin\Debug\net6.0\CallCenterQueueSimulation.runtimeconfig.json
+C:\Users\sleym\CallCenterQueueSimulation\bin\Debug\net6.0\CallCenterQueueSimulation.dll
+C:\Users\sleym\CallCenterQueueSimulation\bin\Debug\net6.0\CallCenterQueueSimulation.pdb
+C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\CallCenterQueueSimulation.dll
+C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\refint\CallCenterQueueSimulation.dll
+C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\CallCenterQueueSimulation.pdb
+C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\CallCenterQueueSimulation.genruntimeconfig.cache
+C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\ref\CallCenterQueueSimulation.dll
