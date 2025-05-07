@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ElBkS4Ubs251heDsRH8XivSz+b4/QEHgknBOWhTv5JM=",
+  "Source": "CallCenterWebApp",
+  "BasePath": "_content/CallCenterWebApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,45 @@
+@page
+@model CallCenterWebApp.Pages.IndexModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Çağrı Merkezi Kuyruk Simülasyonu</title>
+    <style>
+        body { font-family: Arial; background-color: #f0f0f0; padding: 20px; }
+        h1 { color: #333; }
+        input, button { padding: 10px; margin: 5px; }
+        .queue { background: #fff; padding: 10px; border-radius: 5px; }
+        .rep { color: #0066cc; font-weight: bold; } /* Temsilci stili */
+    </style>
+</head>
+<body>
+    <h1>Çağrı Merkezi Kuyruk Simülasyonu</h1>
+
+    <form method="post">
+        <input type="number" name="CustomerID" placeholder="Müşteri ID" required />
+        <input type="text" name="CustomerName" placeholder="Müşteri Adı" required />
+        <input type="number" name="WaitTime" placeholder="Bekleme Süresi (sn)" required />
+        <button type="submit" name="action" value="enqueue">Müşteri Ekle</button>
+        <button type="submit" name="action" value="dequeue">Müşteri Çıkar</button>
+    </form>
+
+    <h2 class="rep">Atanan Temsilci: @Model.AssignedRepresentative</h2>
+
+    <h2>Kuyruk</h2>
+    <div class="queue">
+    @if (Model.QueueList.Count == 0)
+    {
+        <p>Kuyruk boş.</p>
+    }
+    else
+    {
+        foreach (var item in Model.QueueList)
+        {
+            <p>ID: @item.id | İsim: @item.name | Bekleme: @item.waitTime sn</p>
+        }
+    }
+    </div>
+</body>
+</html>
