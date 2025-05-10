@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sleym\\CallCenterQueueSimulation\\CallCenterQueueSimulation.csproj",
-      "projectName": "CallCenterQueueSimulation",
-      "projectPath": "C:\\Users\\sleym\\CallCenterQueueSimulation\\CallCenterQueueSimulation.csproj",
+      "projectUniqueName": "C:\\Users\\sleym\\CallCenterQueueSimulation\\CallCenterWebApp\\CallCenterApp\\CallCenterApp.csproj",
+      "projectName": "CallCenterApp",
+      "projectPath": "C:\\Users\\sleym\\CallCenterQueueSimulation\\CallCenterWebApp\\CallCenterApp\\CallCenterApp.csproj",
       "packagesPath": "C:\\Users\\sleym\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sleym\\CallCenterQueueSimulation\\obj\\",
+      "outputPath": "C:\\Users\\sleym\\CallCenterQueueSimulation\\CallCenterWebApp\\CallCenterApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sleym\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,6 +57,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FYQHdbrMVFQ570+VU4G5XYHu0ZGucAen9/MDyFOZlgHQJLg8uoWDZTCch/8/CnJyYXXijsn4lOocodUHa2vyzg==",
+  "dgSpecHash": "csSZsIE5ZBtlXUxR/wcGeOdTmLExLnRABDaGw9/BE/M4NPvXjzIkjNdeqSuHtNbY/URPjv+U17QgSZpz4X5C5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sleym\\CallCenterQueueSimulation\\CallCenterQueueSimulation.csproj",
+  "projectFilePath": "C:\\Users\\sleym\\CallCenterQueueSimulation\\CallCenterWebApp\\CallCenterApp\\CallCenterApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

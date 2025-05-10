@@ -1,0 +1,110 @@
+@page
+@model CallCenterWebApp.Pages.IndexModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Çağrı Merkezi Kuyruk Simülasyonu</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #eef2f5; padding: 20px; }
+        h1 { color: #2c3e50; }
+        input, button { padding: 10px; margin: 5px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background-color: #3498db; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #2980b9; }
+        .queue { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .rep { color: #0077cc; font-weight: bold; }
+        .timer { color: #c0392b; font-weight: bold; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>Çağrı Merkezi Kuyruk Simülasyonu</h1>
+
+    <form method="post" autocomplete="off">
+        <input type="number" name="CustomerID" placeholder="Müşteri ID" required />
+        <input type="text" name="CustomerName" placeholder="Müşteri Adı" required />
+        <input type="number" name="WaitTime" placeholder="Bekleme Süresi (sn)" required />
+        <button type="submit" name="action" value="add">Müşteri Ekle</button>
+        <button type="submit" name="action" value="remove">Müşteri Çıkar</button>
+    </form>
+
+    <h2 class="rep">Atanan Temsilci: @Model.AssignedRepresentative</h2>
+
+    <h2>Kuyruk (Queue)</h2>
+    <div class="queue">
+        @if (Model.QueueList.Count == 0)
+        {
+            <p>Kuyruk boş.</p>
+        }
+        else
+        {
+            int i = 0;
+            foreach (var item in Model.QueueList)
+            {
+                <p>
+                    <strong>ID:</strong> @item.id |
+                    <strong>İsim:</strong> @item.name |
+                    <strong>Bekleme:</strong> <span id="timer-@i" class="timer">@item.GetRemainingTime()</span> sn |
+                    <strong>Temsilci:</strong> <span class="rep">@item.assignedRep</span>
+                </p>
+                i++;
+            }
+        }
+    </div>
+
+    <h2>Temsilci Bağlantı Ağı (Graph)</h2>
+    <div class="queue">
+        @foreach (var rep in Model.GraphData)
+        {
+            <p><strong>@rep.Key</strong> ➝ @string.Join(", ", rep.Value)</p>
+        }
+    </div>
+
+    <h2>Müşteri Hash Tablosu</h2>
+    <div class="queue">
+        <table>
+            <tr>
+                <th>Slot</th>
+                <th>Müşteriler (ID - İsim)</th>
+            </tr>
+            @for (int i = 0; i < Model.HashTableSize; i++)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>
+                        @foreach (var pair in Model.GetHashBucket(i))
+                        {
+                            <div>@pair.Key - @pair.Value</div>
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <h2>Temsilci Ağacı (InOrder Sıralı)</h2>
+    <div class="queue">
+        <p>
+            @foreach (var rep in Model.GetInOrderRepresentatives())
+            {
+                <span>@rep</span>@(rep != Model.GetInOrderRepresentatives().Last() ? " ➝ " : "")
+            }
+        </p>
+    </div>
+
+    <script>
+        setInterval(function () {
+            let timers = document.querySelectorAll('[id^="timer-"]');
+            timers.forEach(timer => {
+                let current = parseInt(timer.innerText);
+                if (current > 0) {
+                    timer.innerText = current - 1;
+                }
+            });
+        }, 1000);
+    </script>
+</body>
+</html>
