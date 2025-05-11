@@ -55,6 +55,7 @@ namespace CallCenterApp
         private HashSet<string> customerNameSet = new HashSet<string>();
         private List<Representative> reps = new List<Representative>();
         private bool stopRequested = false;
+        private Random random = new Random();  // Rastgele ID üretimi için
 
         public CallCenterSimulator()
         {
@@ -71,13 +72,19 @@ namespace CallCenterApp
                 return;
             }
 
-            var customer = new Customer(customerMap.Count + 1, name);
+            int id;
+            do
+            {
+                id = random.Next(1000, 9999); // 4 haneli rastgele ID
+            } while (customerMap.ContainsKey(id));
+
+            var customer = new Customer(id, name);
             customerQueue.Enqueue(customer);
-            customerMap[customer.Id] = customer;
+            customerMap[id] = customer;
             customerByName[name] = customer;
             customerNameSet.Add(name);
 
-            Console.WriteLine($"{name} sıraya eklendi.");
+            Console.WriteLine($"{name} sıraya eklendi. (ID: {id})");
         }
 
         public void AssignCustomers()
