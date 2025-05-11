@@ -13,3 +13,11 @@ C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\refint\CallCenterQueue
 C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\CallCenterQueueSimulation.pdb
 C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\CallCenterQueueSimulation.genruntimeconfig.cache
 C:\Users\sleym\CallCenterQueueSimulation\obj\Debug\net6.0\ref\CallCenterQueueSimulation.dll
+C:\Users\Api\Desktop\Veri-Yapilari\obj\Debug\net6.0\CallCenterQueueSimulation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Api\Desktop\Veri-Yapilari\obj\Debug\net6.0\CallCenterQueueSimulation.AssemblyInfoInputs.cache
+C:\Users\Api\Desktop\Veri-Yapilari\obj\Debug\net6.0\CallCenterQueueSimulation.AssemblyInfo.cs
+C:\Users\Api\Desktop\Veri-Yapilari\obj\Debug\net6.0\CallCenterQueueSimulation.csproj.CoreCompileInputs.cache
+C:\Users\Api\Desktop\Veri-Yapilari\obj\Debug\net6.0\CallCenterQueueSimulation.sourcelink.json
+C:\Users\Api\Desktop\Veri-Yapilari\obj\Debug\net6.0\CallCenterQueueSimulation.dll
+C:\Users\Api\Desktop\Veri-Yapilari\obj\Debug\net6.0\refint\CallCenterQueueSimulation.dll
+C:\Users\Api\Desktop\Veri-Yapilari\obj\Debug\net6.0\CallCenterQueueSimulation.pdb

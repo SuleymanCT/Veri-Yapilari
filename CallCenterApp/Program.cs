@@ -49,13 +49,9 @@ namespace CallCenterApp
     class CallCenterSimulator
     {
         private Queue<Customer> customerQueue = new Queue<Customer>();
-        private Dictionary<int, Customer> customerMap = new Dictionary<int, Customer>();
-        private Dictionary<string, Customer> customerByName = new Dictionary<string, Customer>();
-        private Dictionary<string, List<Customer>> repHistories = new Dictionary<string, List<Customer>>();
-        private HashSet<string> customerNameSet = new HashSet<string>();
         private List<Representative> reps = new List<Representative>();
         private bool stopRequested = false;
-        private Random random = new Random();  // Rastgele ID üretimi için
+        private Random random = new Random();
 
         public CallCenterSimulator()
         {
@@ -66,24 +62,9 @@ namespace CallCenterApp
 
         public void AddCustomer(string name)
         {
-            if (customerNameSet.Contains(name))
-            {
-                Console.WriteLine($"{name} zaten sırada, tekrar eklenmedi.");
-                return;
-            }
-
-            int id;
-            do
-            {
-                id = random.Next(1000, 9999); // 4 haneli rastgele ID
-            } while (customerMap.ContainsKey(id));
-
+            int id = random.Next(1000, 9999);
             var customer = new Customer(id, name);
             customerQueue.Enqueue(customer);
-            customerMap[id] = customer;
-            customerByName[name] = customer;
-            customerNameSet.Add(name);
-
             Console.WriteLine($"{name} sıraya eklendi. (ID: {id})");
         }
 
@@ -98,11 +79,6 @@ namespace CallCenterApp
                 {
                     var customer = customerQueue.Dequeue();
                     rep.AssignCustomer(customer);
-
-                    if (!repHistories.ContainsKey(rep.Name))
-                        repHistories[rep.Name] = new List<Customer>();
-
-                    repHistories[rep.Name].Add(customer);
                 }
             }
         }
@@ -125,24 +101,6 @@ namespace CallCenterApp
         {
             return customerQueue.Count > 0 || reps.Exists(r => r.IsBusy);
         }
-
-        public void PrintRepresentativeHistories()
-        {
-            Console.WriteLine("\n--- Temsilci Müşteri Geçmişleri ---");
-            foreach (var entry in repHistories)
-            {
-                Console.WriteLine($"Temsilci {entry.Key} şu müşterilere hizmet verdi:");
-                foreach (var customer in entry.Value)
-                {
-                    Console.WriteLine($" - {customer.Name} (ID: {customer.Id})");
-                }
-            }
-        }
-
-        public int GetCustomerCount()
-        {
-            return customerMap.Count;
-        }
     }
 
     class Program
@@ -156,26 +114,18 @@ namespace CallCenterApp
             while (added < 10)
             {
                 string name = Console.ReadLine();
-                int beforeCount = sim.GetCustomerCount();
                 sim.AddCustomer(name);
-                if (sim.GetCustomerCount() > beforeCount)
-                    added++;
+                added++;
             }
 
-            // Simülasyonu başlat
             Thread simThread = new Thread(sim.Run);
             simThread.Start();
 
-            // Kuyruk ve işlemler bitene kadar bekle
             while (sim.HasWaitingCustomers())
                 Thread.Sleep(500);
 
-            // Simülasyonu düzgün durdur
             sim.Stop();
             simThread.Join();
-
-            // Temsilci müşteri geçmişini yazdır
-            sim.PrintRepresentativeHistories();
 
             Console.WriteLine("\nSimülasyon tamamlandı. Çıkmak için bir tuşa basın...");
             Console.ReadKey();
