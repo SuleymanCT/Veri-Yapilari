@@ -1,0 +1,15 @@
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\bin\Debug\net6.0\CallCenterApp.exe
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\bin\Debug\net6.0\CallCenterApp.deps.json
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\bin\Debug\net6.0\CallCenterApp.runtimeconfig.json
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\bin\Debug\net6.0\CallCenterApp.dll
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\bin\Debug\net6.0\CallCenterApp.pdb
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\obj\Debug\net6.0\CallCenterApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\obj\Debug\net6.0\CallCenterApp.AssemblyInfoInputs.cache
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\obj\Debug\net6.0\CallCenterApp.AssemblyInfo.cs
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\obj\Debug\net6.0\CallCenterApp.csproj.CoreCompileInputs.cache
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\obj\Debug\net6.0\CallCenterApp.sourcelink.json
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\obj\Debug\net6.0\CallCenterApp.dll
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\obj\Debug\net6.0\refint\CallCenterApp.dll
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\obj\Debug\net6.0\CallCenterApp.pdb
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\obj\Debug\net6.0\CallCenterApp.genruntimeconfig.cache
+C:\Users\Api\Desktop\Veri-Yapilari\CallCenterApp\obj\Debug\net6.0\ref\CallCenterApp.dll

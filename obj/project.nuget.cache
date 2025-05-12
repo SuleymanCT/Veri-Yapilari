@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": 2,
   "dgSpecHash": "FYQHdbrMVFQ570+VU4G5XYHu0ZGucAen9/MDyFOZlgHQJLg8uoWDZTCch/8/CnJyYXXijsn4lOocodUHa2vyzg==",
@@ -5,4 +6,13 @@
   "projectFilePath": "C:\\Users\\sleym\\CallCenterQueueSimulation\\CallCenterQueueSimulation.csproj",
   "expectedPackageFiles": [],
   "logs": []
+=======
+{
+  "version": 2,
+  "dgSpecHash": "xAS1AYM5/YU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sadet\\Desktop\\Veri-Yapilari\\CallCenterApp\\CallCenterApp.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+>>>>>>> c6a4946 (Kuyruk + Hash + Tree)
 }
