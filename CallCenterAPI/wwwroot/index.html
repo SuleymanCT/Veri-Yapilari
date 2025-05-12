@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Çağrı Merkezi Simülasyonu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📞 Çağrı Merkezi Dashboard</h1>
+
+        <div class="input-section">
+            <input id="nameInput" type="text" placeholder="Müşteri Adı">
+            <button onclick="addCustomer()">Ekle</button>
+        </div>
+
+        <h2>Kuyruk</h2>
+        <div id="queueContainer" class="queue-list"></div>
+
+        <h2>Temsilciler</h2>
+        <div id="repContainer" class="rep-list"></div>
+
+        <h2>Temsilci Ağaçları (BST)</h2>
+        <svg id="bstCanvas" width="1200" height="600" style="border:1px solid #ccc;"></svg>
+
+        <h2>Temsilci Graph Yapısı</h2>
+        <svg id="graphCanvas" width="1000" height="400" style="border:1px solid #ccc;"></svg>
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
