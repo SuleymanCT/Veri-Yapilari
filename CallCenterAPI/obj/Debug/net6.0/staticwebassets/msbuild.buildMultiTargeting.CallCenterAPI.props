@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\CallCenterAPI.props" />
-</Project>
