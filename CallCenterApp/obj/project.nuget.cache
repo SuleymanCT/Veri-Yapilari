@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Ud666c2+IN0=",
+  "dgSpecHash": "i4Si0TOMpBhd7bJTAgn0z6eoR7culuPSFcYIHciWy1iUUvLRegboQ0Dr2hkrZ8JNqoXB8mbmDfSXno2IRVgBoQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Api\\Desktop\\Veri-Yapilari\\CallCenterApp\\CallCenterApp.csproj",
+  "projectFilePath": "C:\\Users\\sleym\\OneDrive\\Masaüstü\\Veri-Yapilari\\CallCenterApp\\CallCenterApp.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Önbellek dosyası C:\\Users\\sleym\\OneDrive\\Masaüstü\\Veri-Yapilari\\CallCenterApp\\obj\\project.nuget.cache okunurken bir sorun oluştu : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
