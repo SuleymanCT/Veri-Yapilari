@@ -49,12 +49,18 @@ Projede kullanılan veri yapılarının performansı ve tercih nedenleri aşağ�
   - Array kullanılsaydı Dequeue işleminde elemanlar kaydırılacağı için O(n) zaman maliyeti oluşacaktı.
   - Queue, bellek ve hız açısından çok daha verimli olduğu için tercih edilmiştir.
 
+Nasıl çalışır:
+  -FIFO (First-In First-Out) mantığıyla çalışır. İlk gelen müşteri, ilk olarak hizmet alır.
+
 **🌳 Binary Search Tree (BST) vs. Linear List:**
 - Kullanım Yeri: Her temsilcinin aldığı müşteri ID’lerini tutmak (CustomerTree.cs)
 - Neden BST Tercih Edildi?
   - Insert ve Search: O(log n)
   - Liste kullanılsaydı, arama O(n) olurdu.
   - Ayrıca BST, SVG olarak çizilip kullanıcıya sunulabilir hale getirildi (TreeNodeDto).
+
+Nasıl çalışır:
+  -Her düğüm, solundaki düğümden küçük, sağındaki düğümden büyük olacak şekilde yerleştirilir. In-order (sıralı) gezildiğinde ID’ler küçükten büyüğe doğru listelenir.
 
 **🕸️ Graph (Directed) vs. Tablo Temelli Aktarım:**
 - Kullanım Yeri: Temsilciler arası müşteri aktarımı modelleme (GraphSimulator.cs)
@@ -63,11 +69,18 @@ Projede kullanılan veri yapılarının performansı ve tercih nedenleri aşağ�
   - Dictionary ile erişim O(1) hızında gerçekleştirildi.
   - Yük paylaşımı ve temsilci yoğunluğu görselleştirilebildi.
 
+Nasıl çalışır:
+  -Yönlü graf yapısıdır. Her temsilcinin bağlı olduğu diğer temsilciler listelenir. Temsilci meşgulken, bağlı komşular kontrol edilerek yönlendirme yapılır.
+
 **🧮 Hashing (GetHashCode) ile ID Üretimi:**
 - Kullanım Yeri: Müşteri ID üretimi ve BST’ye eklenmesi
 - Avantaj:
   - Hızlı ve benzersiz ID üretimi
   - Math.Abs(hash % 10000) ile BST üzerinde dengeli dağılım sağlandı.
+
+Nasıl çalışır:
+  -Anahtar-değer eşleşmesi (Key-Value) üzerinden çalışır. O(1) zaman karmaşıklığıyla veri sorgulama ve ekleme yapılır.
+
 
 **Sonuç:**
 Projede kullanılan veri yapıları zaman ve uzay karmaşıklığı açısından verimli olup, gerçek hayattaki çağrı merkezi sistemlerinin algoritmik olarak modellenmesini başarıyla gerçekleştirilmiştir.
